@@ -2,10 +2,11 @@
 export default function Home(){
 return (
     <div className = "home-content">
-        <h1>You are at home baby!</h1>
+        <h1>Olet saapunut HIMA pagelle!</h1>
         <span>
-            This is just playground to test react techs.<br></br> 
-            Also place to see my cats, intrests etc.
+            Huikealla sitella on lähinä kuvia elämäni tähtihetkistä.<br></br> 
+            <strong>Huomio!</strong> ... Lepo vaan. Pää bugina näyttää olevan, että Kisujen kuva zydeemi<br></br>
+            ei näytä kännykässä toimivan eli tietoloota hommiksi menee.
         </span>
     </div>
 )

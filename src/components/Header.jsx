@@ -5,9 +5,9 @@ export default function Header() {
     <header>
       <Link className="site-logo" to="/">#JRLA</Link>
       <nav>   
-        <Link to="/">Home</Link>
-        <Link to="/gallery">Image gallery</Link>
-        <Link to="/kisut">Cats</Link>
+        <Link to="/">Hima</Link>
+        <Link to="/gallery">Photoja</Link>
+        <Link to="/kisut">Kisut</Link>
       </nav>
     </header>
   );

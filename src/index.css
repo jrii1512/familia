@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+
+nav {
+  font-size:36px;
+}
+
 .host-nav {
   display: table;
 }
@@ -283,5 +288,6 @@ i[class*='kisu-type-'] {
   margin-left:20px;
   font-size: 28px;
   font-style: oblique;
-  text-align: center; 
+  text-align: center;
+  justify-self: left; 
 }
