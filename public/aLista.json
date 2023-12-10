@@ -24,5 +24,15 @@
       "image": "../Images/Homer/Homer.jpg",
       "stars": "*****"
     }
+  ],
+  "ihminen": [
+    {
+      "name": "Jouni",
+      "gender": "Mies",
+      "nature": "Maailman paras ihiminen",
+      "stars": "*****",
+      "image": "../Images//Jouni.jpg",
+      "id": 1
+    }
   ]
 }

@@ -18,30 +18,26 @@
     "cors": "^2.8.5",
     "eslint-plugin-react-refresh": "^0.4.5",
     "json-server": "^0.17.4",
+    "multer": "^1.4.5-lts.1",
     "nodemon": "^3.0.2",
     "papaparse": "^5.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-refresh": "^0.14.0",
     "react-router-dom": "^6.20.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "sqlite3": "^5.1.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --openssl-legacy-provider",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "json": "json-server --watch public/aLista.json --port 8002",
     "servo": "node src/server.js",
-    "mikseri": "concurrently \"npm:json\" \"npm:start\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "mikseri": "concurrently \"npm:json\" \"npm:servo\" \"npm:start\"",
+    "miks": "concurrently \"npm:json\" \"npm:start\""
   },
   "browserslist": {
     "production": [
