@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const { saveFile } = require("../controllers/controller");
 const multer = require("multer");
 
 const storage = multer.diskStorage({
