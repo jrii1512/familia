@@ -30,7 +30,7 @@ export default function Upload() {
     <div className="uploader">
       <h3>Lataa kuva</h3>
       <input type="file" onChange={handleImage} />
-      <img src={file} />
+      <img src={URL. createObjectURL(file)} />
       <button onClick={uploadNow}>Save</button>
     </div>
   );
