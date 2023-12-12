@@ -4,6 +4,8 @@ import "../index.css";
 export default function Upload() {
   const [file, setFile] = React.useState(null);
 
+  const folderRef = React.useRef();
+
   const handleImage = (e) => {
     console.log(e.target.files);
     setFile(e.target.files[0]);
@@ -13,6 +15,7 @@ export default function Upload() {
     const fd = new FormData();
     console.log("file: ", file);
     fd.append("image", file, file.name);
+    fd.append("path", folderRef.current.value)
     fetch(
       "http://localhost:4000/api/uploadData",
       { method: 'POST', body: fd}
@@ -26,11 +29,12 @@ export default function Upload() {
       );
   };
 
+  //<img src={URL.createObjectURL(file)} />
   return (
     <div className="uploader">
       <h3>Lataa kuva</h3>
       <input type="file" onChange={handleImage} />
-      <img src={URL. createObjectURL(file)} />
+      <input type = "text" ref = {folderRef} placeholder="Sub directory"/>
       <button onClick={uploadNow}>Save</button>
     </div>
   );
