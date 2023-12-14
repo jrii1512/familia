@@ -3,7 +3,6 @@ const fs = require("fs");
 const path = require("path");
 const express = require("express");
 const router = express.Router();
-const { columnGroupsStateInitializer } = require("@mui/x-data-grid/internals");
 
 router.get("/alive", (req, res) => {
   return res.json({ data: "Elossa ollaan" }).end();
@@ -33,21 +32,6 @@ router.post("/newdir", (req, res) => {
 router.get("/", (req, res) => {
   res.send("Olet ytimessä").status(200).end();
 });
-
-// Create a function to dynamically set the destination
-
-//const dynamicFolder = (req, file, cb) => {
-// Determine the destination based on your conditions or parameters
-/*let destinationPath = req.file.path;
-  console.log("destinationPath: ", destinationPath);
-*/
-// You can modify the destination path based on your logic
-// For example, use the user ID or some other dynamic information
-// destinationPath += req.user.id + '/';
-
-// Call the callback function with the final destination path
-//cb(null, path.join(__dirname, destinationPath));
-//};
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {

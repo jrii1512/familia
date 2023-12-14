@@ -50,10 +50,10 @@ export default function Upload() {
       <input
         type="text"
         ref={folderRef}
-        placeholder="Sub directory"
+        placeholder="Imagen alihakemisto"
         style={{ width: 200 }}
       />
-      <button onClick={uploadNow}>Save</button>
+      <button onClick={uploadNow}>Talleta</button>
     </div>
   );
 }

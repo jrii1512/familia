@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React from "react";
+import axios from "axios";
 
 const ImageGallery = () => {
   // Use require.context to dynamically import all images from a folder
@@ -8,32 +9,43 @@ const ImageGallery = () => {
   const importAll = (context) => context.keys().map(context);
   const images = importAll(
     // eslint-disable-next-line no-undef
-    require.context("../Images", true, /\.(png|jp?g|svg)$/)
+    require.context("../Images", true, /\.(png|PNG|jp?g|svg)$/)
   );
-
-  console.log("Image Gallery: ", images);
 
   const toggleSize = () => {
     setBigger(!isBigger);
   };
 
+  const removeImage = (index) => {
+    console.log(
+      "Removing index ... as it's local then using fs should be ok",
+      index
+    );
+    axios
+      .delete("http://localhost:4000/api/removeFile", index)
+      .then((response) => console.log("response: ", response))
+      .catch((err) => {
+        console.log("Fileen poistaminenhan meni aivan vituiksi, error:", err);
+      });
+  };
+
   console.log("isBigger:", isBigger);
 
   const imgSize = isBigger ? "bigger" : "normal";
-  console.log("imgSize: ", imgSize)
+  console.log("imgSize: ", imgSize);
 
-  const classes = classNames(`${ imgSize } `);
-  console.log("classes: ", classes)
+  const classes = classNames(`${imgSize} `);
+  console.log("classes: ", classes);
   return (
     <div>
       {images.map((kuva, index) => (
         <img
           key={index}
           src={kuva}
-          alt={kuva.name}
+          alt="photo"
           className={classes}
           onClick={() => toggleSize()}
-          title={kuva.name}
+          onDoubleClick={() => removeImage(index)}
         />
       ))}
     </div>

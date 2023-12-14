@@ -5,7 +5,7 @@
       "name": "Ymmi",
       "gender": "naaras",
       "nature": "Söpöliini joka tekee tuhoja salaa",
-      "image": "../Images/Ymmi/Ymmi.jpg",
+      "image": "../src/Images/kisut/Ymmi.jpg",
       "stars": "*****"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Miisu",
       "gender": "naaras",
       "nature": "Vahva soturiprincessa kissa",
-      "image": "../Images/Miisu/Miisu.jpg",
+      "image": "../src/Images/kisut/Miisu.jpg",
       "stars": "*****"
     },
     {
@@ -21,17 +21,17 @@
       "name": "Hoomeri",
       "gender": "uros",
       "nature": "Kurinpitäjä joskin lähinä Ymmille",
-      "image": "../Images/Homer/Homer.jpg",
+      "image": "../Images/kisut/Homer.jpg",
       "stars": "*****"
     }
   ],
   "ihminen": [
     {
-      "name": "Jouni",
-      "gender": "Mies",
-      "nature": "Maailman paras ihiminen",
+      "name": "Prätkähiiret",
+      "gender": "Kundit",
+      "nature": "Crossi on elämä",
       "stars": "*****",
-      "image": "../Images/Jouni.jpg",
+      "image": "./src/Images/moto/kundit.jpg",
       "id": 1
     }
   ]

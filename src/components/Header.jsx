@@ -7,8 +7,7 @@ export default function Header() {
       <nav>   
         <Link to="/">Hima</Link>
         <Link to="/gallery">Photoja</Link>
-        <Link to="/kisut">Kisut</Link>
-        <Link to="/new">Uusi itemi</Link>
+        <Link to="/kisut">Kisut</Link>        
         <Link to="/uploader">Lataa kuva</Link>
       </nav>
     </header>
