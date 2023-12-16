@@ -42,12 +42,16 @@ export default function KisuDetali() {
               alt={data.name}
               onClick={() => toggleSize(isBigger)}
             />
-            <h2>{data.name}</h2>
-            <p>{data.gender}</p>
-            <p>{data.nature}</p>
+            <table className="kisuTaulu">
+              <div className="row">
+                <div className="cell">Nimi: {data.name}</div>
+                <div className="cell">Sukupuoli: {data.gender}</div>
+                <div className="cell">Erityispiirteet: {data.nature}</div>
+              </div>
+            </table>
           </div>
         ) : (
-          <h2 key={data.id + 10}>Issues ...</h2>
+          <h2 key={data.id + 10}>Kuvan id:eetä ei löydy...</h2>
         )
       )}
     </div>

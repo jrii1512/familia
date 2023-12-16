@@ -4,7 +4,7 @@
       "name": "Ymmi",
       "gender": "naaras",
       "nature": "Söpöliini joka tekee tuhoja salaa",
-      "photo": "Images/kisut/Ymmi.jpg",
+      "photo": "../Images/kisut/Ymmi.jpg",
       "stars": "*****"
     },
     {
@@ -20,7 +20,7 @@
       "name": "Homer",
       "gender": "uros",
       "nature": "Kurinpitäjä joskin lähinä Ymmille",
-      "photo": "Images/kisut/Homer.jpg",
+      "photo": "../Images/kisut/Homer.jpg",
       "stars": "*****"
     }
   ]
