@@ -1,0 +1,26 @@
+[
+    {
+      "id": 0,
+      "name": "Ymmi",
+      "gender": "naaras",
+      "nature": "Söpöliini joka tekee tuhoja salaa",
+      "photo": "Images/kisut/Ymmi.jpg",
+      "stars": "*****"
+    },
+    {
+      "id": 1,
+      "name": "Miisu",
+      "gender": "naaras",
+      "nature": "Vahva soturiprincessa",
+      "photo": "../Images/kisut/Miisu.jpg",
+      "stars": "*****"
+    },
+    {
+      "id": 2,
+      "name": "Homer",
+      "gender": "uros",
+      "nature": "Kurinpitäjä joskin lähinä Ymmille",
+      "photo": "Images/kisut/Homer.jpg",
+      "stars": "*****"
+    }
+  ]

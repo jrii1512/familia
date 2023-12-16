@@ -9,7 +9,7 @@ const ImageGallery = () => {
   const importAll = (context) => context.keys().map(context);
   const images = importAll(
     // eslint-disable-next-line no-undef
-    require.context("../Images", true, /\.(png|PNG|jp?g|svg)$/)
+    require.context("../../public/Images", true, /\.(png|PNG|jp?g|svg)$/)
   );
 
   const toggleSize = () => {
@@ -36,6 +36,8 @@ const ImageGallery = () => {
 
   const classes = classNames(`${imgSize} `);
   console.log("classes: ", classes);
+
+  console.log("kuvia:", images)
   return (
     <div>
       {images.map((kuva, index) => (

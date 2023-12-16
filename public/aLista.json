@@ -1,38 +1,19 @@
 {
-  "kisut": [
-    {
-      "id": 0,
-      "name": "Ymmi",
-      "gender": "naaras",
-      "nature": "Söpöliini joka tekee tuhoja salaa",
-      "image": "../src/Images/kisut/Ymmi.jpg",
-      "stars": "*****"
-    },
+  "posts": [
     {
       "id": 1,
-      "name": "Miisu",
-      "gender": "naaras",
-      "nature": "Vahva soturiprincessa kissa",
-      "image": "../src/Images/kisut/Miisu.jpg",
-      "stars": "*****"
-    },
-    {
-      "id": 2,
-      "name": "Hoomeri",
-      "gender": "uros",
-      "nature": "Kurinpitäjä joskin lähinä Ymmille",
-      "image": "../Images/kisut/Homer.jpg",
-      "stars": "*****"
+      "title": "json-server",
+      "author": "typicode"
     }
   ],
-  "ihminen": [
+  "comments": [
     {
-      "name": "Prätkähiiret",
-      "gender": "Kundit",
-      "nature": "Crossi on elämä",
-      "stars": "*****",
-      "image": "./src/Images/moto/kundit.jpg",
-      "id": 1
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
     }
-  ]
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />         
+          <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<ImageGallery />} />
           <Route path="/kisut" element={<Kisut />} />
           <Route path="/kisut/:id" element={<KisuDetali />} />
