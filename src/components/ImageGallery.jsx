@@ -37,9 +37,10 @@ const ImageGallery = () => {
   const classes = classNames(`${imgSize} `);
   console.log("classes: ", classes);
 
-  console.log("kuvia:", images)
+  console.log("kuvia:", images);
   return (
     <div>
+      <h3 className="galleria-title">Sekalaisia kuvia, klikkaaminen suureentaa kaikki eli happy scrolling</h3>
       {images.map((kuva, index) => (
         <img
           key={index}

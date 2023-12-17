@@ -227,35 +227,38 @@ i[class*='kisu-type-'] {
 }
 
 .kisu-detail-container {
-  padding: 97px;
+  position: relative;
+  height: 80vh;
+  border:33px solid;
+  border-color:#E17654;
+  margin:20px;
+  background-color: lightgray;
 }
 
-.kisu-detail-container .back-button {
-  color: black;
-  text-decoration: none;
-}
-
-.kisu-detail-container .back-button:visited {
-  
-}
-
-.kisu-detail-container .back-button span {
-  text-decoration: underline;
-}
-
-.kisu-detail {
-  display: flex;
-  flex-direction: column;
-  color: #161616;
+.kisu-detail-info{
+  margin-top:100px;
+  text-align: center;
+  font-size: 26px;
 }
 
 .kisu-detail-normal img{
-  width:20%;
-}
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 20px;
+  }
 
 .kisu-detail-bigger img {
-  border-radius: 5px;
-  width:40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  border-radius: 20px;
 }
 
 
@@ -268,15 +271,6 @@ i[class*='kisu-type-'] {
   align-self: flex-start;
 }
 
-.kisu-detail .kisu-price {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-
-.kisu-detail .kisu-price span {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
 
 .kisu-detail .link-button {
   background-color: #FF8C38;
@@ -284,13 +278,48 @@ i[class*='kisu-type-'] {
   font-size: 1.125rem;
 }
 
-.home-content{
+.kisu-detail-taulu
+{
+  margin: 100px auto;
+  font-size:26px;
+  font-weight: bold;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  border: 1px solid black;
+  padding: 8px;
+  
+}
+
+.home-container{
   margin-left:20px;
   font-size: 28px;
   font-style: oblique;
   text-align: center;
-  justify-self: left; 
+  justify-content: left; 
 }
+
+.home-container-title{
+  margin-top:100px;
+  font-size: 28px;
+  justify-content: left;
+  color:#4D4D4D; 
+}
+
+.home-container-text{
+  margin: 200px auto 200px 0;
+  font-size: 18px;
+  font-style: oblique;
+  text-align: left;
+  justify-content: left; 
+}
+
+
 
 .newContainer{
   display: flex;
@@ -359,17 +388,13 @@ i[class*='kisu-type-'] {
   font-size: 30px;
 }
 
-.kisuTaulu{
-  display:table; 
+.galleria{
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  gap:20px;
 }
 
-.row {
-  display: table-row;
-}
-
-.cell {
-  display: table-cell;
-  border: 1px solid black;
-  padding: 8px;
-  margin-top:20px;
+.galleria-title{
+text-align: center;
+font-size: 24px;;
 }
