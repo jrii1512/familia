@@ -9,19 +9,30 @@ router.get("/alive", (req, res) => {
 });
 
 const isFolderPresent = (folder) => {
-  let wholePath = `./src/Images/${folder}`;
-  if (!fs.existsSync(`${wholePath}`)) {
+  let folderExist = false;
+  let wholePath = `public/Images/${folder}`;
+  let tempPath = "public/Images";
+
+  fs.readdir(tempPath, (err, files) => {
+    if (err) {
+      console.error("Error reading directory:", err);
+      return;
+    }
+
+    console.log("Files in the directory:", files);
+  });
+
+  if (!fs.existsSync(wholePath)) {
     fs.mkdir(wholePath, { recursive: false }, (err) => {
       if (err) {
         console.error("Error creating directory:", err);
-        return false;
       } else {
         console.log("Directory created successfully");
-        return true;
+        folderExist = true;
       }
     });
   }
-  return wholePath;
+  return folderExist;
 };
 router.post("/newdir", (req, res) => {
   const { folder } = req.body;
@@ -35,7 +46,7 @@ router.get("/", (req, res) => {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, "../Images/temp"));
+    cb(null, path.join(__dirname, "../../public/Images/temp"));
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);
@@ -48,8 +59,8 @@ router.post("/api/uploadData", upload.single("image"), async (req, res) => {
   const { data } = req.body;
 
   fs.rename(
-    path.join(__dirname, "../Images/temp/" + filename),
-    path.join(__dirname, `../Images/${data}/${filename}`),
+    path.join(__dirname, "../../public/Images/temp/" + filename),
+    path.join(__dirname, `../../public/Images/${data}/${filename}`),
     function (err) {
       if (err) {
         console.error(err);

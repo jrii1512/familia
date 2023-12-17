@@ -36,7 +36,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "json": "json-server --watch public/aLista.json --port 8002",
-    "servo": "node src/server.js",
+    "servo": "nodemon --inspect src/server.js",
     "mikseri": "concurrently \"npm:json\" \"npm:servo\" \"npm:start\"",
     "miks": "concurrently \"npm:json\" \"npm:start\""
   },

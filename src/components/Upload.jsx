@@ -28,7 +28,6 @@ export default function Upload() {
       fd.append("data", folderLocation)
 
       
-
       axios
         .post("http://localhost:4000/api/uploadData", fd)
         .then((response) => console.log(response))
@@ -46,12 +45,11 @@ export default function Upload() {
   return (
     <div className="uploader">
       <h3>Lataa kuva</h3>
-      <input type="file" onChange={handleImage} />
+      <input id = "chooser" type="file" onChange={handleImage} />
       <input
         type="text"
         ref={folderRef}
         placeholder="Imagen alihakemisto"
-        style={{ width: 200 }}
       />
       <button onClick={uploadNow}>Talleta</button>
     </div>
