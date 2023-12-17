@@ -40,7 +40,6 @@ const ImageGallery = () => {
   console.log("kuvia:", images);
   return (
     <div>
-      <h3 className="galleria-title">Sekalaisia kuvia, klikkaaminen suureentaa kaikki eli happy scrolling</h3>
       {images.map((kuva, index) => (
         <img
           key={index}
