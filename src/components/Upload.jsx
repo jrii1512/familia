@@ -49,7 +49,7 @@ export default function Upload() {
       <input
         type="text"
         ref={folderRef}
-        placeholder="Kuvasi kategorointi esim Joulu, mopoily yms"
+        placeholder="Kuvasi tagi"
       />
       <button onClick={uploadNow}>Talleta</button>
     </div>
