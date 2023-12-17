@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 200px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -297,11 +297,13 @@ i[class*='kisu-type-'] {
 }
 
 .home-container{
+  margin: auto;
   font-size: 28px;
   font-style: oblique;
-  text-align: center;
-  justify-content: center;
-
+  max-width: 300px;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
 }
 
 .home-container-title{
@@ -311,9 +313,9 @@ i[class*='kisu-type-'] {
   color:#4D4D4D; 
 }
 
-.home-container-text{
-  font-size: 24px;
-  font-style: oblique;  
+.home-container span{
+  text-align: center;
+  justify-content: center;
 }
 
 
