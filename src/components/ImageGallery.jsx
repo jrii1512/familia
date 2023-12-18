@@ -34,14 +34,14 @@ const ImageGallery = () => {
   const imgSize = isBigger ? "bigger" : "normal";
   console.log("imgSize: ", imgSize);
 
-  const classes = classNames(`${imgSize} `);
+  const classes = classNames(`kisu-list ${imgSize} `);
   console.log("classes: ", classes);
 
   console.log("kuvia:", images);
   return (
-    <div>
+    <div className="kisu-gallery-container">
       {images.map((kuva, index) => (
-        <img
+        <img 
           key={index}
           src={kuva}
           alt="photo"
