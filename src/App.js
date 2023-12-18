@@ -16,7 +16,7 @@ function App() {
           <Route path="/gallery" element={<ImageGallery />} />
           <Route path="/kisut" element={<Kisut />} />
           <Route path="/kisut/:id" element={<KisuDetali />} />
-          <Route path="/uploader" element={<Upload />} />
+          {process.env.REACT_APP_SERVER === "http://localhost:4000" && <Route path="/uploader" element={<Upload />} />}
         </Route>
       </Routes>
     </BrowserRouter>

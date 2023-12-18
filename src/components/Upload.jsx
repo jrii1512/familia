@@ -11,9 +11,11 @@ export default function Upload() {
     setFile(e.target.files[0]);
   };
 
+
+  console.log("Serveri johon päivitetään: ", process.env.REACT_APP_SERVER)
   const ensureStructure = (folder) => {
     axios
-      .post("http://localhost:4000/newdir", { folder })
+      .post(process.env.REACT_APP_SERVER + "/newdir", { folder })
       .then((response) => console.log("ensureStructure: ", response));
     return true;
     };
@@ -29,7 +31,7 @@ export default function Upload() {
 
       
       axios
-        .post("http://localhost:4000/api/uploadData", fd)
+        .post(process.env.REACT_APP_SERVER + "/uploadData", fd)
         .then((response) => console.log(response))
         .catch((err) =>
           console.error(

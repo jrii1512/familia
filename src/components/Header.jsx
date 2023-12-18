@@ -8,7 +8,7 @@ export default function Header() {
         <Link to="/">Hima</Link>
         <Link to="/gallery">Photoja</Link>
         <Link to="/kisut">Kisut</Link>        
-        <Link to="/uploader">Lataa kuva</Link>
+        {process.env.REACT_APP_SERVER === "http://localhost:4000" && <Link to="/uploader">Lataa kuva</Link>}
       </nav>
     </header>
   );
