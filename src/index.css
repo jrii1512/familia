@@ -114,14 +114,20 @@ nav {
 }
 
 .kisu-list-tile {
-  margin-left:20px;
-  margin-right: 20px;
-  margin-bottom:20px;
-  border: 1px solid;  
-  border-radius: 5px;
+  margin:20px;
+  margin-left:2px;
+  border: 0px solid;  
+  border-radius: 0px;
   border-color:#161616;
   color: black;
   background-color:antiquewhite;}
+
+.kisu-list-title{
+  margin-left:20px;
+  margin-bottom:10px;
+  font-size: 26px;
+  font-weight: bold;
+}
 
 .kisu-list-tile a {
   color: #161616;
@@ -129,11 +135,11 @@ nav {
 }
 
 .kisu-list-tile img {
-  margin:20px;
+  margin:0px;
   background-color: #4D4D4D;
   padding:10px;
   max-width: 95%;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 .kisu-list-info {
