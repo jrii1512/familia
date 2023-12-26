@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import kisuData from "../aLista.json";
+import "../kisulit.css"
 
 export default function Kisut() {
   const kisulit = kisuData?.map((k) => (

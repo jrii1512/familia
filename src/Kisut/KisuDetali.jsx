@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Photos from "../aLista.json";
+import "../kisulit.css"
 
 export default function KisuDetali() {
   const [isBigger, setBigger] = React.useState(false);
